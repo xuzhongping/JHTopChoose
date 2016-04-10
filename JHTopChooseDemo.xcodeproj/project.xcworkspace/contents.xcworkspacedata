@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ZSTopChoose_demo.xcodeproj">
+      location = "self:JHTopChooseDemo.xcodeproj">
    </FileRef>
 </Workspace>

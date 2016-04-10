@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ZSTopChoose_demo.xcscheme</key>
+		<key>JHTopChooseDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>33B2500A1CB853770036A060</key>
+		<key>337F51321CBA25F90025E53E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33B250231CB853770036A060</key>
+		<key>337F514B1CBA25F90025E53E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33B2502E1CB853770036A060</key>
+		<key>337F51561CBA25F90025E53E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

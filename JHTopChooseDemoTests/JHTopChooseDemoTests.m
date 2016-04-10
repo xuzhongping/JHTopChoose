@@ -1,18 +1,18 @@
 //
-//  ZSTopChoose_demoTests.m
-//  ZSTopChoose_demoTests
+//  JHTopChooseDemoTests.m
+//  JHTopChooseDemoTests
 //
-//  Created by 徐仲平 on 16/4/9.
-//  Copyright © 2016年 zoneSure. All rights reserved.
+//  Created by 徐仲平 on 16/4/10.
+//  Copyright © 2016年 JungHsu. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ZSTopChoose_demoTests : XCTestCase
+@interface JHTopChooseDemoTests : XCTestCase
 
 @end
 
-@implementation ZSTopChoose_demoTests
+@implementation JHTopChooseDemoTests
 
 - (void)setUp {
     [super setUp];

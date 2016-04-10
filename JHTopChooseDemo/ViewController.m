@@ -1,14 +1,14 @@
 //
 //  ViewController.m
-//  ZSTopChoose_demo
+//  JHTopChooseDemo
 //
-//  Created by 徐仲平 on 16/4/9.
-//  Copyright © 2016年 zoneSure. All rights reserved.
+//  Created by 徐仲平 on 16/4/10.
+//  Copyright © 2016年 JungHsu. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "ZSTopChooseController.h"
-#import "ZSTableViewController.h"
+#import "JHTopChooseController.h"
+#import "JHTableViewController.h"
 
 @interface ViewController ()
 
@@ -18,20 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ZSTopChooseController *top=[[ZSTopChooseController alloc]init];
+   
+    JHTopChooseController *top=[[JHTopChooseController alloc]init];
     
     
-    ZSTableViewController *one=[[ZSTableViewController alloc]init];
+    JHTableViewController *one=[[JHTableViewController alloc]init];
     one.title=@"one";
-    ZSTableViewController *two=[[ZSTableViewController alloc]init];
+    JHTableViewController *two=[[JHTableViewController alloc]init];
     two.title=@"two";
-    ZSTableViewController *three=[[ZSTableViewController alloc]init];
+    JHTableViewController *three=[[JHTableViewController alloc]init];
     three.title=@"three";
-    ZSTableViewController *four=[[ZSTableViewController alloc]init];
+    JHTableViewController *four=[[JHTableViewController alloc]init];
     four.title=@"four";
-    ZSTableViewController *five=[[ZSTableViewController alloc]init];
+    JHTableViewController *five=[[JHTableViewController alloc]init];
     five.title=@"five";
-    ZSTableViewController *six=[[ZSTableViewController alloc]init];
+    JHTableViewController *six=[[JHTableViewController alloc]init];
     six.title=@"six";
     top.subChildViewController=@[one,two,three,four,five,six];
     

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33B2500A1CB853770036A060"
-               BuildableName = "ZSTopChoose_demo.app"
-               BlueprintName = "ZSTopChoose_demo"
-               ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+               BlueprintIdentifier = "337F51321CBA25F90025E53E"
+               BuildableName = "JHTopChooseDemo.app"
+               BlueprintName = "JHTopChooseDemo"
+               ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33B250231CB853770036A060"
-               BuildableName = "ZSTopChoose_demoTests.xctest"
-               BlueprintName = "ZSTopChoose_demoTests"
-               ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+               BlueprintIdentifier = "337F514B1CBA25F90025E53E"
+               BuildableName = "JHTopChooseDemoTests.xctest"
+               BlueprintName = "JHTopChooseDemoTests"
+               ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33B2502E1CB853770036A060"
-               BuildableName = "ZSTopChoose_demoUITests.xctest"
-               BlueprintName = "ZSTopChoose_demoUITests"
-               ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+               BlueprintIdentifier = "337F51561CBA25F90025E53E"
+               BuildableName = "JHTopChooseDemoUITests.xctest"
+               BlueprintName = "JHTopChooseDemoUITests"
+               ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33B2500A1CB853770036A060"
-            BuildableName = "ZSTopChoose_demo.app"
-            BlueprintName = "ZSTopChoose_demo"
-            ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+            BlueprintIdentifier = "337F51321CBA25F90025E53E"
+            BuildableName = "JHTopChooseDemo.app"
+            BlueprintName = "JHTopChooseDemo"
+            ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33B2500A1CB853770036A060"
-            BuildableName = "ZSTopChoose_demo.app"
-            BlueprintName = "ZSTopChoose_demo"
-            ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+            BlueprintIdentifier = "337F51321CBA25F90025E53E"
+            BuildableName = "JHTopChooseDemo.app"
+            BlueprintName = "JHTopChooseDemo"
+            ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33B2500A1CB853770036A060"
-            BuildableName = "ZSTopChoose_demo.app"
-            BlueprintName = "ZSTopChoose_demo"
-            ReferencedContainer = "container:ZSTopChoose_demo.xcodeproj">
+            BlueprintIdentifier = "337F51321CBA25F90025E53E"
+            BuildableName = "JHTopChooseDemo.app"
+            BlueprintName = "JHTopChooseDemo"
+            ReferencedContainer = "container:JHTopChooseDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

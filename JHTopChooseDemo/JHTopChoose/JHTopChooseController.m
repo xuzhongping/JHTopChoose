@@ -1,11 +1,11 @@
 //
-//  ZSTopChooseController.m
+//  JHTopChooseController.m
 //
 //  Created by 徐仲平 on 16/4/9.
 //  Copyright © 2016年 徐仲平. All rights reserved.
 //
 
-#import "ZSTopChooseController.h"
+#import "JHTopChooseController.h"
 #define STATUS_HEIGHT 20
 #define INDICATOR_HEIGHT 2
 #define TITLEVIEW_HEIGHT 35
@@ -13,7 +13,7 @@
 
 
 
-@interface ZSTopChooseController ()<UIScrollViewDelegate>
+@interface JHTopChooseController ()<UIScrollViewDelegate>
 
 /**
  *  上次选中的按钮
@@ -45,7 +45,7 @@
 
 @end
 
-@implementation ZSTopChooseController
+@implementation JHTopChooseController
 
 -(NSMutableArray *)titleButtons{
     
@@ -84,7 +84,7 @@
     [self.view insertSubview:contentView atIndex:0];
     
     //设置scrollView的contentSize
-    contentView.contentSize=CGSizeMake(self.childViewControllers.count * self.view.zs_width, 0);
+    contentView.contentSize=CGSizeMake(self.childViewControllers.count * self.view.jh_width, 0);
     //设置分页
     contentView.pagingEnabled=YES;
     //水平方向不显示滚动条
@@ -97,10 +97,10 @@
     //标签view
     UIView *titleView=[[UIView alloc]init];
     titleView.backgroundColor=[[UIColor whiteColor] colorWithAlphaComponent:0.7];
-    titleView.zs_x=0;
-    titleView.zs_y=self.navigationController.navigationBar.zs_height+STATUS_HEIGHT;
-    titleView.zs_width=self.view.zs_width;
-    titleView.zs_height=TITLEVIEW_HEIGHT;
+    titleView.jh_x=0;
+    titleView.jh_y=self.navigationController.navigationBar.jh_height+STATUS_HEIGHT;
+    titleView.jh_width=self.view.jh_width;
+    titleView.jh_height=TITLEVIEW_HEIGHT;
     self.titleView=titleView;
     
     [self.view addSubview:titleView];
@@ -110,8 +110,8 @@
     
     indicatorView.backgroundColor=_indicatorColor?_indicatorColor:[UIColor redColor];
     
-    indicatorView.zs_height=INDICATOR_HEIGHT;
-    indicatorView.zs_y=titleView.zs_height-indicatorView.zs_height;
+    indicatorView.jh_height=INDICATOR_HEIGHT;
+    indicatorView.jh_y=titleView.jh_height-indicatorView.jh_height;
     
     self.indicatorView=indicatorView;
     [titleView addSubview:indicatorView];
@@ -126,9 +126,9 @@
         [titleBtn setTitleColor:self.titleColor?self.titleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [titleBtn setTitleColor:self.selectedColor?self.selectedColor:[UIColor redColor] forState:UIControlStateSelected];
         
-        titleBtn.zs_width = self.view.zs_width / self.titles.count;
-        titleBtn.zs_height = titleView.zs_height;
-        titleBtn.zs_x = titleBtn.zs_width * i;
+        titleBtn.jh_width = self.view.jh_width / self.titles.count;
+        titleBtn.jh_height = titleView.jh_height;
+        titleBtn.jh_x = titleBtn.jh_width * i;
         
         [titleView addSubview:titleBtn];
         [self.titleButtons addObject:titleBtn];
@@ -139,8 +139,8 @@
             titleBtn.selected=YES;
             self.selectedBtn=titleBtn;
             [titleBtn.titleLabel sizeToFit];
-            self.indicatorView.zs_width=titleBtn.titleLabel.zs_width;
-            self.indicatorView.zs_centerX=titleBtn.zs_centerX;
+            self.indicatorView.jh_width=titleBtn.titleLabel.jh_width;
+            self.indicatorView.jh_centerX=titleBtn.jh_centerX;
             
             [self scrollViewDidEndScrollingAnimation:contentView];
         }
@@ -157,12 +157,12 @@
     
     //移动指示器到对应按钮位置
     [UIView animateWithDuration:ANIMATE_DURATION animations:^{
-        self.indicatorView.zs_width=button.titleLabel.zs_width;
-        self.indicatorView.zs_centerX=button.zs_centerX;
+        self.indicatorView.jh_width=button.titleLabel.jh_width;
+        self.indicatorView.jh_centerX=button.jh_centerX;
     }];
     
     //    self.contentView.contentOffset=CGPointMake(button.tag * self.view.widtxh, 0);
-    [self.contentView setContentOffset:CGPointMake(button.tag * self.view.zs_width, 0) animated:YES];
+    [self.contentView setContentOffset:CGPointMake(button.tag * self.view.jh_width, 0) animated:YES];
     
     
 }
@@ -171,13 +171,13 @@
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     
     //添加对应的控制器view到内容scrollView
-    NSInteger index=scrollView.contentOffset.x / self.view.zs_width;
+    NSInteger index=scrollView.contentOffset.x / self.view.jh_width;
     
     UITableViewController *vc=self.childViewControllers[index];
-    vc.view.zs_x=scrollView.contentOffset.x;
-    vc.view.zs_y=0;
-    vc.view.zs_size=self.view.zs_size;
-    vc.tableView.contentInset=UIEdgeInsetsMake(CGRectGetMaxY(self.titleView.frame), 0,self.tabBarController.tabBar.zs_height, 0);
+    vc.view.jh_x=scrollView.contentOffset.x;
+    vc.view.jh_y=0;
+    vc.view.jh_size=self.view.jh_size;
+    vc.tableView.contentInset=UIEdgeInsetsMake(CGRectGetMaxY(self.titleView.frame), 0,self.tabBarController.tabBar.jh_height, 0);
     vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
     [scrollView addSubview:vc.view];
     
@@ -186,7 +186,7 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     
     //拿到滑动的位置所对应的索引
-    NSInteger index=scrollView.contentOffset.x / self.view.zs_width;
+    NSInteger index=scrollView.contentOffset.x / self.view.jh_width;
     
     [self titleClick:self.titleButtons[index]];
     
@@ -204,120 +204,120 @@
 @end
 
 
-@implementation UIView (ZS_Extension)
--(void)setZs_width:(CGFloat)zs_width{
-
+@implementation UIView (JHExtension)
+-(void)setJh_width:(CGFloat)jh_width{
+    
     CGRect frame=self.frame;
     
-    frame.size.width=zs_width;
+    frame.size.width=jh_width;
     
     self.frame=frame;
 }
 
--(void)setZs_height:(CGFloat)zs_height{
+-(void)setJh_height:(CGFloat)jh_height{
     
     CGRect frame=self.frame;
     
-    frame.size.height=zs_height;
-    
-    self.frame=frame;
-    
-}
-
--(void)setZs_x:(CGFloat)zs_x{
-    CGRect frame=self.frame;
-    
-    frame.origin.x=zs_x;
+    frame.size.height=jh_height;
     
     self.frame=frame;
     
 }
 
--(void)setZs_y:(CGFloat)zs_y{
+-(void)setJh_x:(CGFloat)jh_x{
     CGRect frame=self.frame;
     
-    frame.origin.y=zs_y;
+    frame.origin.x=jh_x;
+    
+    self.frame=frame;
+    
+}
+
+-(void)setJh_y:(CGFloat)jh_y{
+    CGRect frame=self.frame;
+    
+    frame.origin.y=jh_y;
     
     self.frame=frame;
     
     
 }
 
--(void)setZs_size:(CGSize)zs_size{
+-(void)setJh_size:(CGSize)jh_size{
     
     CGRect frame=self.frame;
     
-    frame.size=zs_size;
+    frame.size=jh_size;
     
     self.frame=frame;
     
 }
 
--(void)setZs_origin:(CGPoint)zs_origin{
+-(void)setJh_origin:(CGPoint)jh_origin{
     
     CGRect frame=self.frame;
     
-    frame.origin=zs_origin;
+    frame.origin=jh_origin;
     
     self.frame=frame;
     
 }
 
--(void)setZs_centerX:(CGFloat)zs_centerX{
+-(void)setJh_centerX:(CGFloat)jh_centerX{
     
     CGPoint center=self.center;
     
-    center.x=zs_centerX;
+    center.x=jh_centerX;
     
     self.center=center;
     
 }
 
--(void)setZs_centerY:(CGFloat)zs_centerY{
+-(void)setJh_centerY:(CGFloat)jh_centerY{
     CGPoint center=self.center;
-    center.y=zs_centerY;
+    center.y=jh_centerY;
     
     self.center=center;
     
 }
 
 
--(CGFloat)zs_width{
+-(CGFloat)jh_width{
     
     return self.frame.size.width;
 }
 
--(CGFloat)zs_height{
+-(CGFloat)jh_height{
     
     return self.frame.size.height;
 }
 
--(CGFloat)zs_x{
+-(CGFloat)jh_x{
     
     return self.frame.origin.x;
 }
 
--(CGFloat)zs_y{
+-(CGFloat)jh_y{
     
     return self.frame.origin.y;
 }
 
--(CGSize)zs_size{
+-(CGSize)jh_size{
     
     return self.frame.size;
 }
 
--(CGPoint)zs_origin{
+-(CGPoint)jh_origin{
     
     return self.frame.origin;
 }
 
--(CGFloat)zs_centerX{
+-(CGFloat)jh_centerX{
     
     return self.center.x;
 }
 
--(CGFloat)zs_centerY{
+-(CGFloat)jh_centerY{
     
     return self.center.y;
 }

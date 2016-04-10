@@ -1,18 +1,18 @@
 //
-//  ZSTableViewController.m
-//  demo
+//  JHTableViewController.m
+//  JHTopChooseDemo
 //
-//  Created by 徐仲平 on 16/4/9.
-//  Copyright © 2016年 徐仲平. All rights reserved.
+//  Created by 徐仲平 on 16/4/10.
+//  Copyright © 2016年 JungHsu. All rights reserved.
 //
 
-#import "ZSTableViewController.h"
+#import "JHTableViewController.h"
 
-@interface ZSTableViewController ()
+@interface JHTableViewController ()
 
 @end
 
-@implementation ZSTableViewController
+@implementation JHTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,8 +28,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows

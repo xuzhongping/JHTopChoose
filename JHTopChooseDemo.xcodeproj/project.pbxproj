@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		337F51381CBA25F90025E53E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F51371CBA25F90025E53E /* main.m */; };
+		337F513B1CBA25F90025E53E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F513A1CBA25F90025E53E /* AppDelegate.m */; };
+		337F513E1CBA25F90025E53E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F513D1CBA25F90025E53E /* ViewController.m */; };
+		337F51431CBA25F90025E53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337F51421CBA25F90025E53E /* Assets.xcassets */; };
+		337F51461CBA25F90025E53E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F51441CBA25F90025E53E /* LaunchScreen.storyboard */; };
+		337F51511CBA25F90025E53E /* JHTopChooseDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F51501CBA25F90025E53E /* JHTopChooseDemoTests.m */; };
+		337F515C1CBA25F90025E53E /* JHTopChooseDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F515B1CBA25F90025E53E /* JHTopChooseDemoUITests.m */; };
+		337F516C1CBA27690025E53E /* JHTopChooseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F516B1CBA27690025E53E /* JHTopChooseController.m */; };
+		337F51721CBA298A0025E53E /* JHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F51711CBA298A0025E53E /* JHTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		337F514D1CBA25F90025E53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 337F512B1CBA25F90025E53E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 337F51321CBA25F90025E53E;
+			remoteInfo = JHTopChooseDemo;
+		};
+		337F51581CBA25F90025E53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 337F512B1CBA25F90025E53E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 337F51321CBA25F90025E53E;
+			remoteInfo = JHTopChooseDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		337F51331CBA25F90025E53E /* JHTopChooseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHTopChooseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		337F51371CBA25F90025E53E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		337F51391CBA25F90025E53E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		337F513A1CBA25F90025E53E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		337F513C1CBA25F90025E53E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		337F513D1CBA25F90025E53E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		337F51421CBA25F90025E53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		337F51451CBA25F90025E53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		337F51471CBA25F90025E53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337F514C1CBA25F90025E53E /* JHTopChooseDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHTopChooseDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		337F51501CBA25F90025E53E /* JHTopChooseDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTopChooseDemoTests.m; sourceTree = "<group>"; };
+		337F51521CBA25F90025E53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337F51571CBA25F90025E53E /* JHTopChooseDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHTopChooseDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		337F515B1CBA25F90025E53E /* JHTopChooseDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTopChooseDemoUITests.m; sourceTree = "<group>"; };
+		337F515D1CBA25F90025E53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337F516A1CBA27690025E53E /* JHTopChooseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTopChooseController.h; sourceTree = "<group>"; };
+		337F516B1CBA27690025E53E /* JHTopChooseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTopChooseController.m; sourceTree = "<group>"; };
+		337F51701CBA298A0025E53E /* JHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewController.h; sourceTree = "<group>"; };
+		337F51711CBA298A0025E53E /* JHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		337F51301CBA25F90025E53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F51491CBA25F90025E53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F51541CBA25F90025E53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		337F512A1CBA25F90025E53E = {
+			isa = PBXGroup;
+			children = (
+				337F51351CBA25F90025E53E /* JHTopChooseDemo */,
+				337F514F1CBA25F90025E53E /* JHTopChooseDemoTests */,
+				337F515A1CBA25F90025E53E /* JHTopChooseDemoUITests */,
+				337F51341CBA25F90025E53E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		337F51341CBA25F90025E53E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				337F51331CBA25F90025E53E /* JHTopChooseDemo.app */,
+				337F514C1CBA25F90025E53E /* JHTopChooseDemoTests.xctest */,
+				337F51571CBA25F90025E53E /* JHTopChooseDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		337F51351CBA25F90025E53E /* JHTopChooseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				337F51691CBA27690025E53E /* JHTopChoose */,
+				337F51701CBA298A0025E53E /* JHTableViewController.h */,
+				337F51711CBA298A0025E53E /* JHTableViewController.m */,
+				337F51391CBA25F90025E53E /* AppDelegate.h */,
+				337F513A1CBA25F90025E53E /* AppDelegate.m */,
+				337F513C1CBA25F90025E53E /* ViewController.h */,
+				337F513D1CBA25F90025E53E /* ViewController.m */,
+				337F51421CBA25F90025E53E /* Assets.xcassets */,
+				337F51441CBA25F90025E53E /* LaunchScreen.storyboard */,
+				337F51471CBA25F90025E53E /* Info.plist */,
+				337F51361CBA25F90025E53E /* Supporting Files */,
+			);
+			path = JHTopChooseDemo;
+			sourceTree = "<group>";
+		};
+		337F51361CBA25F90025E53E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				337F51371CBA25F90025E53E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		337F514F1CBA25F90025E53E /* JHTopChooseDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				337F51501CBA25F90025E53E /* JHTopChooseDemoTests.m */,
+				337F51521CBA25F90025E53E /* Info.plist */,
+			);
+			path = JHTopChooseDemoTests;
+			sourceTree = "<group>";
+		};
+		337F515A1CBA25F90025E53E /* JHTopChooseDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				337F515B1CBA25F90025E53E /* JHTopChooseDemoUITests.m */,
+				337F515D1CBA25F90025E53E /* Info.plist */,
+			);
+			path = JHTopChooseDemoUITests;
+			sourceTree = "<group>";
+		};
+		337F51691CBA27690025E53E /* JHTopChoose */ = {
+			isa = PBXGroup;
+			children = (
+				337F516A1CBA27690025E53E /* JHTopChooseController.h */,
+				337F516B1CBA27690025E53E /* JHTopChooseController.m */,
+			);
+			path = JHTopChoose;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		337F51321CBA25F90025E53E /* JHTopChooseDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337F51601CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemo" */;
+			buildPhases = (
+				337F512F1CBA25F90025E53E /* Sources */,
+				337F51301CBA25F90025E53E /* Frameworks */,
+				337F51311CBA25F90025E53E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JHTopChooseDemo;
+			productName = JHTopChooseDemo;
+			productReference = 337F51331CBA25F90025E53E /* JHTopChooseDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		337F514B1CBA25F90025E53E /* JHTopChooseDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337F51631CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemoTests" */;
+			buildPhases = (
+				337F51481CBA25F90025E53E /* Sources */,
+				337F51491CBA25F90025E53E /* Frameworks */,
+				337F514A1CBA25F90025E53E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				337F514E1CBA25F90025E53E /* PBXTargetDependency */,
+			);
+			name = JHTopChooseDemoTests;
+			productName = JHTopChooseDemoTests;
+			productReference = 337F514C1CBA25F90025E53E /* JHTopChooseDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		337F51561CBA25F90025E53E /* JHTopChooseDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337F51661CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemoUITests" */;
+			buildPhases = (
+				337F51531CBA25F90025E53E /* Sources */,
+				337F51541CBA25F90025E53E /* Frameworks */,
+				337F51551CBA25F90025E53E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				337F51591CBA25F90025E53E /* PBXTargetDependency */,
+			);
+			name = JHTopChooseDemoUITests;
+			productName = JHTopChooseDemoUITests;
+			productReference = 337F51571CBA25F90025E53E /* JHTopChooseDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		337F512B1CBA25F90025E53E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = JungHsu;
+				TargetAttributes = {
+					337F51321CBA25F90025E53E = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					337F514B1CBA25F90025E53E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 337F51321CBA25F90025E53E;
+					};
+					337F51561CBA25F90025E53E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 337F51321CBA25F90025E53E;
+					};
+				};
+			};
+			buildConfigurationList = 337F512E1CBA25F90025E53E /* Build configuration list for PBXProject "JHTopChooseDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 337F512A1CBA25F90025E53E;
+			productRefGroup = 337F51341CBA25F90025E53E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				337F51321CBA25F90025E53E /* JHTopChooseDemo */,
+				337F514B1CBA25F90025E53E /* JHTopChooseDemoTests */,
+				337F51561CBA25F90025E53E /* JHTopChooseDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		337F51311CBA25F90025E53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337F51461CBA25F90025E53E /* LaunchScreen.storyboard in Resources */,
+				337F51431CBA25F90025E53E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F514A1CBA25F90025E53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F51551CBA25F90025E53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		337F512F1CBA25F90025E53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337F516C1CBA27690025E53E /* JHTopChooseController.m in Sources */,
+				337F513E1CBA25F90025E53E /* ViewController.m in Sources */,
+				337F513B1CBA25F90025E53E /* AppDelegate.m in Sources */,
+				337F51381CBA25F90025E53E /* main.m in Sources */,
+				337F51721CBA298A0025E53E /* JHTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F51481CBA25F90025E53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337F51511CBA25F90025E53E /* JHTopChooseDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F51531CBA25F90025E53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337F515C1CBA25F90025E53E /* JHTopChooseDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		337F514E1CBA25F90025E53E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 337F51321CBA25F90025E53E /* JHTopChooseDemo */;
+			targetProxy = 337F514D1CBA25F90025E53E /* PBXContainerItemProxy */;
+		};
+		337F51591CBA25F90025E53E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 337F51321CBA25F90025E53E /* JHTopChooseDemo */;
+			targetProxy = 337F51581CBA25F90025E53E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		337F51441CBA25F90025E53E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				337F51451CBA25F90025E53E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		337F515E1CBA25F90025E53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		337F515F1CBA25F90025E53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		337F51611CBA25F90025E53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JHTopChooseDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		337F51621CBA25F90025E53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JHTopChooseDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		337F51641CBA25F90025E53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JHTopChooseDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JHTopChooseDemo.app/JHTopChooseDemo";
+			};
+			name = Debug;
+		};
+		337F51651CBA25F90025E53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JHTopChooseDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JHTopChooseDemo.app/JHTopChooseDemo";
+			};
+			name = Release;
+		};
+		337F51671CBA25F90025E53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JHTopChooseDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JHTopChooseDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		337F51681CBA25F90025E53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JHTopChooseDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JungHsu.JHTopChooseDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JHTopChooseDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		337F512E1CBA25F90025E53E /* Build configuration list for PBXProject "JHTopChooseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337F515E1CBA25F90025E53E /* Debug */,
+				337F515F1CBA25F90025E53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		337F51601CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337F51611CBA25F90025E53E /* Debug */,
+				337F51621CBA25F90025E53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		337F51631CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337F51641CBA25F90025E53E /* Debug */,
+				337F51651CBA25F90025E53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		337F51661CBA25F90025E53E /* Build configuration list for PBXNativeTarget "JHTopChooseDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337F51671CBA25F90025E53E /* Debug */,
+				337F51681CBA25F90025E53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 337F512B1CBA25F90025E53E /* Project object */;
+}

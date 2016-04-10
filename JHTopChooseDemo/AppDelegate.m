@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  ZSTopChoose_demo
+//  JHTopChooseDemo
 //
-//  Created by 徐仲平 on 16/4/9.
-//  Copyright © 2016年 zoneSure. All rights reserved.
+//  Created by 徐仲平 on 16/4/10.
+//  Copyright © 2016年 JungHsu. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,8 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     UITabBarController *tabBarVc=[[UITabBarController alloc]init];
     self.window.rootViewController=tabBarVc;
     

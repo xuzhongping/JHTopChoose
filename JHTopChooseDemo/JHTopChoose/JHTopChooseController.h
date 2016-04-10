@@ -1,5 +1,5 @@
 //
-//  ZSTopChooseController.h
+//  JHTopChooseController.h
 //
 //  Created by 徐仲平 on 16/4/9.
 //  Copyright © 2016年 徐仲平. All rights reserved.
@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZSTopChooseController : UIViewController
+@interface JHTopChooseController : UIViewController
 
 @property (nonatomic,strong)NSArray *subChildViewController;
 
@@ -32,15 +32,15 @@
 
 @end
 
-@interface UIView (ZS_Extension)
-@property (nonatomic,assign)CGFloat zs_width;
-@property (nonatomic,assign)CGFloat zs_height;
-@property (nonatomic,assign)CGFloat zs_x;
-@property (nonatomic,assign)CGFloat zs_y;
-@property (nonatomic,assign)CGSize zs_size;
-@property (nonatomic,assign)CGPoint zs_origin;
-@property (nonatomic,assign)CGFloat zs_centerX;
-@property (nonatomic,assign)CGFloat zs_centerY;
+@interface UIView (JHExtension)
+@property (nonatomic,assign)CGFloat jh_width;
+@property (nonatomic,assign)CGFloat jh_height;
+@property (nonatomic,assign)CGFloat jh_x;
+@property (nonatomic,assign)CGFloat jh_y;
+@property (nonatomic,assign)CGSize  jh_size;
+@property (nonatomic,assign)CGPoint jh_origin;
+@property (nonatomic,assign)CGFloat jh_centerX;
+@property (nonatomic,assign)CGFloat jh_centerY;
 
 @end
 
