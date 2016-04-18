@@ -35,10 +35,7 @@
     JHTableViewController *six=[[JHTableViewController alloc]init];
     six.title=@"six";
     top.subChildViewController=@[one,two,three,four,five,six];
-    
-    //    top.titleColor=[UIColor yellowColor];
-    //    top.selectedColor=[UIColor greenColor];
-    //    top.indicatorColor=[UIColor greenColor];
+
     
     [top addToController:self];
 }
