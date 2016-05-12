@@ -9,7 +9,7 @@
 
 @interface JHTopChooseController : UIViewController
 
-@property (nonatomic,strong)NSArray *subChildViewController;
+@property (nonatomic,strong)NSArray<UIViewController *> *subChildViewController;
 
 /**
  *  标题颜色
