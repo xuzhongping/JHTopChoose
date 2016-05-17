@@ -11,17 +11,17 @@
 
 @property (nonatomic,strong)NSArray<UIViewController *> *subChildViewController;
 
-/**
- *  标题颜色
- */
+/** 默认的标题颜色 */
 @property (nonatomic,strong)UIColor *titleColor;
 
-@property (nonatomic,strong)UIColor *selectedColor;
+/** 选中的标题颜色 */
+@property (nonatomic,strong)UIColor *selectedTitleColor;
 
-/**
- *  指示器颜色
- */
+/** 指示器颜色 */
 @property (nonatomic,strong)UIColor *indicatorColor;
+
+/** 屏幕一页最多显示多少个标签 */
+@property (nonatomic,assign)NSUInteger maxTitleCount;
 
 /**
  *  添加到需要显示的控制器

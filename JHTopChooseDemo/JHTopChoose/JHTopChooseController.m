@@ -37,7 +37,7 @@
 /**
  *  标签view
  */
-@property (nonatomic,weak)UIView *titleView;
+@property (nonatomic,weak)UIScrollView *titleView;
 /**
  *  标签名
  */
@@ -63,10 +63,10 @@
     return _titles;
 }
 
+-(void)setSubChildViewController:(NSArray<UIViewController *> *)subChildViewController{
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+    _subChildViewController = subChildViewController;
+   
     //内容控制器
     if (!_subChildViewController.count) return;
     for (UIViewController *controller in _subChildViewController) {
@@ -75,7 +75,25 @@
         [self addChildViewController:controller];
     }
     
-    //内容scrollView
+    
+    /** 默认最大每页标题数等于总标题数 */
+    _maxTitleCount = _maxTitleCount ? _maxTitleCount : _titles.count;
+    
+    _indicatorColor = _indicatorColor ? _indicatorColor : [UIColor redColor];
+    
+    _titleColor = _titleColor ? _titleColor : [UIColor grayColor];
+    _selectedTitleColor = _selectedTitleColor ? _selectedTitleColor : [UIColor redColor];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    CGFloat btnW = self.view.jh_width / _maxTitleCount;
+    
+
+    
+    //初始化内容scrollView
     UIScrollView *contentView = [[UIScrollView alloc]init];
     
     contentView.frame = self.view.bounds;
@@ -91,16 +109,18 @@
     contentView.showsHorizontalScrollIndicator = NO;
     //禁止弹簧效果
     contentView.bounces = NO;
-    
     self.contentView = contentView;
     
-    //标签view
-    UIView *titleView = [[UIView alloc]init];
+    //初始化标签view
+    UIScrollView *titleView = [[UIScrollView alloc]init];
     titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
+  
     titleView.jh_x = 0;
     titleView.jh_y = self.navigationController.navigationBar.jh_height+STATUS_HEIGHT;
     titleView.jh_width = self.view.jh_width;
     titleView.jh_height = TITLEVIEW_HEIGHT;
+    titleView.contentSize = CGSizeMake(_titles.count * btnW, 0);
+    titleView.showsHorizontalScrollIndicator = NO;
     self.titleView = titleView;
     
     [self.view addSubview:titleView];
@@ -108,7 +128,7 @@
     //指示器
     UIView *indicatorView = [[UIView alloc]init];
     
-    indicatorView.backgroundColor = _indicatorColor?_indicatorColor:[UIColor redColor];
+    indicatorView.backgroundColor = _indicatorColor;
     
     indicatorView.jh_height = INDICATOR_HEIGHT;
     indicatorView.jh_y = titleView.jh_height-indicatorView.jh_height;
@@ -123,10 +143,10 @@
         titleBtn.tag = i;
         [titleBtn setTitle:self.titles[i] forState:UIControlStateNormal];
         titleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [titleBtn setTitleColor:self.titleColor?self.titleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [titleBtn setTitleColor:self.selectedColor?self.selectedColor:[UIColor redColor] forState:UIControlStateSelected];
+        [titleBtn setTitleColor:_titleColor forState:UIControlStateNormal];
+        [titleBtn setTitleColor:_selectedTitleColor forState:UIControlStateSelected];
         
-        titleBtn.jh_width  =  self.view.jh_width / self.titles.count;
+        titleBtn.jh_width  =  btnW;
         titleBtn.jh_height  =  titleView.jh_height;
         titleBtn.jh_x  =  titleBtn.jh_width * i;
         
@@ -136,19 +156,18 @@
         [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
         
         if (i == 0) { //默认选中第一行
-            titleBtn.selected = YES;
-            self.selectedBtn = titleBtn;
+            [self titleClick:titleBtn];
             [titleBtn.titleLabel sizeToFit];
             self.indicatorView.jh_width = titleBtn.titleLabel.jh_width;
             self.indicatorView.jh_centerX = titleBtn.jh_centerX;
-            
-            [self scrollViewDidEndScrollingAnimation:contentView];
+
         }
     }
     
     
     
 }
+#pragma mark - 标签的点击
 -(void)titleClick:(UIButton *)button{
     
     self.selectedBtn.selected = NO;
@@ -161,38 +180,52 @@
         self.indicatorView.jh_centerX = button.jh_centerX;
     }];
     
-    //    self.contentView.contentOffset = CGPointMake(button.tag * self.view.widtxh, 0);
-    [self.contentView setContentOffset:CGPointMake(button.tag * self.view.jh_width, 0) animated:YES];
+   /** 移动contentView到对应的位置并添加控制器的view */
+    CGFloat offsetX = button.tag * self.view.jh_width;
+    [self.contentView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
+
+    /** 自动滑动titleView到中间 */
+    CGFloat x = button.center.x - _titleView.frame.size.width * 0.5;
     
+    if (x <= 0 ) {
+        x = 0;
+    }else if (x >= _titleView.contentSize.width - _titleView.frame.size.width){
+        
+        x = _titleView.contentSize.width - _titleView.frame.size.width;
+
+    }
+    [_titleView setContentOffset:CGPointMake(x, 0) animated:YES];
+    
+    UITableViewController *vc = self.childViewControllers[button.tag];
+    vc.view.frame = CGRectMake(offsetX, 0, _contentView.jh_width, _contentView.jh_height);
+    vc.tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(_titleView.frame), 0, self.tabBarController.tabBar.jh_height,0);
+
+    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    [_contentView addSubview:vc.view];
 }
 
 #pragma mark - UIScrollViewDelegate
--(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-    
-    //添加对应的控制器view到内容scrollView
-    NSInteger index = scrollView.contentOffset.x / self.view.jh_width;
-    
-    UITableViewController *vc = self.childViewControllers[index];
-    vc.view.jh_x = scrollView.contentOffset.x;
-    vc.view.jh_y = 0;
-    vc.view.jh_size = self.view.jh_size;
-    vc.tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(self.titleView.frame), 0,self.tabBarController.tabBar.jh_height, 0);
-    vc.tableView.scrollIndicatorInsets  =  vc.tableView.contentInset;
-    [scrollView addSubview:vc.view];
-    
-}
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     
+
     //拿到滑动的位置所对应的索引
     NSInteger index = scrollView.contentOffset.x / self.view.jh_width;
     
     [self titleClick:self.titleButtons[index]];
-    
-    [self scrollViewDidEndScrollingAnimation:scrollView];
-    
+
 }
+
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//
+//    CGFloat index = scrollView.contentOffset.x / _contentView.jh_width;
+//    
+//    NSUInteger leftTitleIndex = index;
+//    NSUInteger rightTitleIndex = index + 1;
+//    
+//    _titleColor
+//}
 
 
 -(void)addToController:(UIViewController *)controller{

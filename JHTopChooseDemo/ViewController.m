@@ -35,6 +35,7 @@
     JHTableViewController *six=[[JHTableViewController alloc]init];
     six.title=@"six";
     top.subChildViewController=@[one,two,three,four,five,six];
+    top.maxTitleCount = 4;
 
     
     [top addToController:self];
